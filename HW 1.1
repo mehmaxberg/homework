@@ -1,0 +1,22 @@
+#Программа для ввода файлов из каталога и их вывода в 3 столбца 
+use strict;
+my $i=0;
+my $n=0;
+my $k=0;
+opendir DIR, "/home/maks/etoperl" or die $!;
+while (my $fn = readdir DIR){$n++}
+closedir DIR;
+opendir DIR, "/home/maks/etoperl" or die $!;
+while ($k<=$n) {
+  while ($i<3){my $fname = readdir DIR;print "$fname".";";$i++;$k++}
+  print"\n";
+  $i=0;
+}
+closedir DIR;
+#Вывод программы:
+maks@compik:~$ perl /home/maks/etoperl/perl
+qwe;www;ke k;
+next;.;te xt;
+kript;..;perl;
+ewq;gty;;
+#Где . и .. - имена файлов
