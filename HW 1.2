@@ -1,1 +1,10 @@
-cat  /home/maks/etoperl/text | perl -e 'my $p;while(<>){undef$p;while("$_"<=>";"){$p=$p.$_;print $p} "$p";if (-s "/hmaks/etoperl/$p" >10 ) {print"1"}}'
+#Д/з 1.2 Однострочник
+cat  /home/maks/etoperl/text | perl -ne 'my $y;my $null;<MYFILE>;my @sym = split(//,$_);
+foreach my $x(@sym){$y=$y.$x;if (-s "/home/maks/etoperl/$y">1024*1024){print"\n".$y." ";$i++};
+if ($x eq";"){$y=$null}};$strok++;if ($i>0){$nado++};print"\nВсего строк ".$strok.",a нужных ".$nado; $i=0'
+# Вывод программы:
+ewq 
+Всего строк 1,a нужных 1
+Всего строк 2,a нужных 1
+qwe 
+Всего строк 3,a нужных 2
