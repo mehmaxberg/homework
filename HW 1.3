@@ -1,1 +1,58 @@
+use strict;
+use Data::Dumper;
+use Data::Printer;
+open FID, "/home/maks/etoperl/text"
+	or die "Failed to open /home/maks/etoperl/text $!\n";
+my $i = 0;my $j =0; my $y; my @mas;
+while(<FID>){
+	
+	my @sym = split(//,$_);
+	foreach my $x(@sym){
+		if ($x eq ";"){$mas[$i][$j]=$y;$y="";$j++;}else
+		{$y=$y.$x;}
+				
+			
+}
+		$j=0;$i++;
+}
+print Dumper(@mas);
+p @mas;
+close FID;
+# Вывод программы:
+$VAR1 = [
+          'ewq',
+          'gty',
+          'ke k'
+        ];
+$VAR2 = [
+          '
+kript',
+          'next',
+          'perl'
+        ];
+$VAR3 = [
+          '
+qwe',
+          'text',
+          'te xt'
+        ];
+[
+    [0] [
+        [0] "ewq",
+        [1] "gty",
+        [2] "ke k"
+    ],
+    [1] [
+        [0] "
+kript",
+        [1] "next",
+        [2] "perl"
+    ],
+    [2] [
+        [0] "
+qwe",
+        [1] "text",
+        [2] "te xt"
+    ]
+]
 
