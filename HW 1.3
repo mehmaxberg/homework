@@ -8,6 +8,7 @@ while(<FID>){
 	
 	my @sym = split(//,$_);
 	foreach my $x(@sym){
+		if ($x eq "\n"){$x=""}
 		if ($x eq ";"){$mas[$i][$j]=$y;$y="";$j++;}else
 		{$y=$y.$x;}
 				
@@ -20,39 +21,44 @@ p @mas;
 close FID;
 # Вывод программы:
 $VAR1 = [
+          'ads as    fg g',
+          'debug_session',
+          'df           d             '
+        ];
+$VAR2 = [
           'ewq',
           'gty',
           'ke k'
         ];
-$VAR2 = [
-          '
-kript',
+$VAR3 = [
+          'kript',
           'next',
           'perl'
         ];
-$VAR3 = [
-          '
-qwe',
+$VAR4 = [
+          'qwe',
           'text',
           'te xt'
         ];
 [
     [0] [
+        [0] "ads as    fg g",
+        [1] "debug_session",
+        [2] "df           d             "
+    ],
+    [1] [
         [0] "ewq",
         [1] "gty",
         [2] "ke k"
     ],
-    [1] [
-        [0] "
-kript",
+    [2] [
+        [0] "kript",
         [1] "next",
         [2] "perl"
     ],
-    [2] [
-        [0] "
-qwe",
+    [3] [
+        [0] "qwe",
         [1] "text",
         [2] "te xt"
     ]
 ]
-
