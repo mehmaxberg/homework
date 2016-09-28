@@ -1,8 +1,10 @@
 #Д/з 1.2 Однострочник
 cat  /home/maks/etoperl/text | perl -ne 'my $y;my $null;<MYFILE>;my @sym = split(//,$_);foreach my $x(@sym){$y=$y.$x;if (-s "/home/maks/etoperl/$y">1024*1024){print"\n".$y." ";$i++};if ($x eq";"){$y=$null}};$strok++;if ($i>0){$nado++};print"\nВсего строк ".$strok.",а нужных ".$nado; $i=0'
 # Вывод программы:
+
+Всего строк 1,а нужных 
 ewq 
-Всего строк 1,а нужных 1
 Всего строк 2,а нужных 1
+Всего строк 3,а нужных 1
 qwe 
-Всего строк 3,а нужных 2
+Всего строк 4,а нужных 2
