@@ -1,7 +1,16 @@
 #Д/з 1.1 
-ls -l /home/maks/etoperl/ | perl -e 'my$i=-1;my$y;while(<>){$i++;my @sym = split(//,$_);foreach my $x(@sym){if($x eq"\n"){undef $x};if($x eq" "and $y eq""){undef $y}else{$y=$y.$x};if ($x eq ":"){undef $y}};if($i>0){substr($y,0,3) = "";print$y.";"};if($i%3==0 and $i>0){print"\n"}}' > /home/maks/etoperl/text
+ls -l /home/maks/etoperl | perl -E 'my $pr;my $y;my $g;while(<>){my @sym=split(//,$_);foreach my$x(@sym){if($g==1){if($x eq " " and $pr eq ";"){$x=" "}elsif($x eq" "){$x=";";$pr=";"};$y=$y.$x}else{if($x eq ":"){$g=1};if($x eq " " and $pr eq ";"){$x=""}elsif($x eq " " and $pr ne ";"){$x=";"};$y=$y.$x;if($x ne""){$pr=$x}}}$g=0};print$y' > /home/maks/etoperl/text
 #Вывод программы:
-ads as    fg g;debug_session;df           d             ;
-ewq;gty;ke k;
-kript;next;perl;
-qwe;text;te xt;
+итого;4060
+-rw-rw-r--;1;maks;maks;2747809;сен;26;23:17;4qwe
+-rw-rw-r--;1;maks;maks;0;сен;29;00:22;                          ads as    fg g
+-rw-rw-r--;1;maks;maks;123;сен;29;01:29;debug_session
+-rw-rw-r--;1;maks;maks;214;сен;30;19:27;df           d             
+-rw-rw-r--;1;maks;maks;1369194;сен;26;23:16;ewq
+-rw-rw-r--;1;maks;maks;681;сен;28;16:49;gty
+-rw-rw-r--;1;maks;maks;916;сен;27;22:32;ke k
+-rw-rw-r--;1;maks;maks;122;сен;24;17:10;kript
+-rw-rw-r--;1;maks;maks;394;сен;29;00:54;next
+-rw-rw-r--;1;maks;maks;417;сен;25;23:14;perl
+-rw-rw-r--;1;maks;maks;132;сен;29;10:37;text
+-rw-rw-r--;1;maks;maks;603;сен;26;23:38;te xt
